@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+ 		<title></title>
+ 		<meta http-equiv="Content-Type" content "text/html; charser=UTF-8">
+ 		<style type="text/css">
+ 		.operacion
+ 		{
+ 			width: 25%;
+ 			float: left;
+ 			text-align: center;
+ 			padding-top: 
+ 		};
+ 		#suma{
+ 			background: #bdc37;
+ 		};
+ 		#clear{
+ 			clear: both;
+ 		};
+ 		#h1{
+ 			text-align: center;	
+ 		};
+ 		input[type=text]{
+ 			width: 70%;
+ 			height: 70%;
+ 			background: cc0000;
+ 			border: none;
+ 			margin: 20px;
+ 		};
+ 		.operador{
+ 			font-size: 30px;
+ 			line-height: 90px;
+ 			margin: 0 10px;
+ 		};
+ 		.resultado{
+ 			border: 1pX solid red;
+ 		};
+ 		</style>
+ 		<script type="text/javascript" charset="UTF-8">
+ 		function fsuma(){
+ 			document.getElementById("fsuma").innerHTML= parseFloat.(document.getElementById("s1").value) + parseFloat.(document.getElementById("s2").value);
+ 		};
+ 		function fresta(){
+ 			document.getElementById("fresta").innerHTML= parseFloat.(document.getElementById("r1").value) + parseFloat.(document.getElementById("r2").value);
+ 		};
+ 		function fmultiplicar(){
+ 			document.getElementById("fmultiplicar").innerHTML= parseFloat.(document.getElementById("m1").value) + parseFloat.(document.getElementById("m2").value);
+ 		};
+ 		function fdivicion(){
+ 			document.getElementById("fdivicion").innerHTML= parseFloat.(document.getElementById("d1").value) + parseFloat.(document.getElementById("d2").value);
+ 		};
+ 		function fborrar(x){
+ 			if (x == 1) {
+ 				document.getElementById("s1").value =="";
+ 				document.getElementById("s2").value =="";
+ 			};
+ 		function fborrar(x){
+ 			if (x == 2) {
+ 				document.getElementById("r1").value =="";
+ 				document.getElementById("r2").value =="";
+ 			};
+ 		function fborrar(x){
+ 			if (x == 3) {
+ 				document.getElementById("m1").value =="";
+ 				document.getElementById("m2").value =="";
+ 			};
+ 		function fborrar(x){
+ 			if (x == 4) {
+ 				document.getElementById("d1").value =="";
+ 				document.getElementById("d2").value =="";
+ 			};
+ 		};
+ 		</script>
+	</head>
+	<body>
+		<h1>matematicas</h1>
+		<div id="suma" class="operacion"></div>
+		<input type="text" id="s1"></input>
+		<span class="operador">+</span>
+		<input type="text" id="s2"></input>
+		<input type="button" id="sumar"></input>
+		<input type="button" value="suma" onclick="fsuma(1);"></input>
+		   
+
+		<div id="resta" class="operacion"></div>
+		<input type="text" id="r1"></input>
+		<span class="operador">-</span>
+		<input type="text" id="r2"></input>
+		<input type="button" id="resta"></input>
+		<input type="button" value="resta" onclick="fresta(2);"></input>
+
+		<div id="multi" class="operacion"></div>
+			<input type="text" id="m1"></input>
+			<span class="operador">*</span>
+			<input type="text" id="m2"></input>
+			<input type="button" id="multi"></input>
+			<input type="button" value="multiplica" onclick="fmultiplicar(3);"></input>
+
+		<div id="divicion" class="operacion"></div>
+			<input type="text" id="d1"></input>
+			<span class="operador">/</span>
+			<input type="text" id="d2"></input>
+			<input type="button" id="dividcon"></input>
+			<input type="button" value="divide" onclick="fdivicion(4);"></input>
+	</body>
+</html

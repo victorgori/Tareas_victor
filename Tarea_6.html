@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="http://code.jquery.com/color/jquery.color-2.1.2.min.js"></script>
+ 		<title>JQuery</title>
+ 		<style type="text/css" media="screen">
+ 			.clear{
+ 				clear: both;
+ 			}
+ 			.cuadro{
+ 				width: 200px;
+ 				height: 200px;
+ 				float:left;
+ 				margin: 10px;
+ 				
+ 			}
+ 			#rojo{
+ 				background:red;
+ 			}
+ 			#azul{
+ 				background:blue;
+ 				display: none;
+ 			}
+ 			#verde{
+ 				background:green;
+ 				display: none;
+ 			}
+ 			#negro{
+ 				background:black;
+ 				display: none;
+ 			}
+ 			#naranja{
+ 				background:FF6600;
+ 				display: none;
+ 			}
+ 		</style>
+ 		<meta http-equiv="Content-Type" content "text/html"; charser="UTF-8"></meta>
+	</head>
+	<body>
+		<script type="text/javascript" charser="UTF-8">
+
+			function aparece(){
+				$("#rojo").show();
+			};
+			function desaparece(){
+				$("#rojo").hide();
+
+			};
+			function fadein(){
+				$("#azul").fadeIn(1000,function(){
+					$("#verde").fadeIn(1000);
+				});
+			};
+			function fadeout(){
+				$("#azul").fadeOut(1000, function(){
+					$("#verde").fadeOut(1000)
+				});
+
+			};
+				function toggle(){
+				$("#azul").fadeToggle(1000,function(){
+					$("#verde").fadeToggle()
+				});
+
+			};
+
+				function slidetoggle(){
+				$("#negro").slideToggle(1000)
+
+			};
+			$(document).ready(function(){ 
+
+				$("#rojo").click(function(){
+					$("#naranja").fadeIn(300)
+				});
+				$("#verde").mouseenter(function(){
+					$("#naranja").css(300)
+				});
+				$("#verde").mouseleave(function(){
+					$("#naranja").css(300)
+				});
+
+				$("#negro").click(function(){
+					$("#naranja").animate({
+						width:"500px",
+						backgroundColor:"#33CC33",
+					},1000)
+				});
+				$("#naranja").mouseenter(function(){
+					$(this)
+				})
+
+			});
+
+			
+		</script>
+		<input type="button" value="aparece" onclick="aparece();"></input>
+		<input type="button" value="desaparce" onclick="desaparece();"></input>
+		<input type="button" value="fadein" onclick="fadein();"></input>
+		<input type="button" value="fideout" onclick="fadeout();"></input>
+		<input type="button" value="toggle" onclick="toggle();"></input>
+		<input type="button" value="slidetoggle" onclick="slidetoggle();"></input>
+
+		<div class="clear" ></div>
+		<div id="rojo" class="cuadro"></div>
+		<div id="azul" class="cuadro"></div>
+		<div id="verde" class="cuadro"></div>
+		<div id="negro" class="cuadro"></div>
+		<div class="clear" ></div>
+	</body>
+</html
