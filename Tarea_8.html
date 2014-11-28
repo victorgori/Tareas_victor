@@ -1,0 +1,58 @@
+<html>
+	<head>
+ 		<title></title>
+ 			<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+			<script src="https://code.jquery.com/color/jquery.color-2.1.2.min.js"></script>
+ 		<meta http-equiv="Content-Type" content "text/html"; charser="UTF-8"></meta>
+
+ 		<style type="text/css" media="screen">
+			.meses{
+				width:50px;
+				height:50px;
+				margin: 5px;
+				float: left;
+				background-color:#de9301;
+			}
+			
+			.dias{
+				width:20px;
+				height:20px;
+				margin: 5px;
+				float: left;
+				background-color:#01c7de;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="mes">"MM"</div>
+		<div id="dia">"DD"</div>
+		<script type="text/javascript">
+
+    		var d = new Date();
+			var meses = d.getMonth();
+			var dias = d.getDay();
+			
+    		
+       		for (i = 0; i <= meses; i++){		
+		 
+	jQuery("#mes").append('<div class="meses"></div>')
+
+	}
+	$(".meses").click( function(){
+				$(this).fadeOut(5000)
+				});
+		
+		
+       		for (i = 0; i <= dias; i++){		
+		 
+	jQuery("#dia").append('<div class="dias"></div>')
+	
+			}
+			
+			$(".dias").click( function(){
+				$(this).fadeOut(5000)
+				});
+			
+		</script>
+	</body>
+</html
